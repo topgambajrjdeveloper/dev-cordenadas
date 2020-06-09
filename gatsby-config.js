@@ -10,7 +10,7 @@ module.exports = {
     description: "Este es el sitio portafolio de DevCordenadas",
     author: "@DCordenadas",
     twitterUsername: "@DCordenadas",
-    image: "/code-web.png",
+    image: "/julifoto_byn.png",
     siteUrl: "https://dev-cordenadas.xyz/",
   },
   plugins: [
