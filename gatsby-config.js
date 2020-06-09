@@ -26,6 +26,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true
+      }
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.API_URL || "http://localhost:3001",
