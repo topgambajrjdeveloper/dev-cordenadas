@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL || "http://localhost:3001",
+        apiURL: process.env.API_URL || "https://intense-refuge-03241.herokuapp.com",
         queryLimit: 1000, // Default to 100
         // contentTypes: [`jobs`, `projects`, `blogs`, ],
         //singleTypes:[`about` ]
