@@ -34,11 +34,11 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL || "https://intense-refuge-03241.herokuapp.com",
-        queryLimit: 1000, // Default to 100
+        apiURL: "https://intense-refuge-03241.herokuapp.com",
         // contentTypes: [`jobs`, `projects`, `blogs`, ],
         //singleTypes:[`about` ]
         contentTypes: [`jobs`, `projects`, `blogs`],
+        queryLimit: 1000, // Default to 100
         singleTypes: [`about`],
       },
     },
