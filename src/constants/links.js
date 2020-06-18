@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 3,
-    text: "projectos",
+    text: "proyectos",
     url: "/projects/",
   },
   {

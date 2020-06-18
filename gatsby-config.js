@@ -38,8 +38,8 @@ module.exports = {
         // contentTypes: [`jobs`, `projects`, `blogs`, ],
         //singleTypes:[`about` ]
         contentTypes: [`jobs`, `projects`, `blogs`],
-        queryLimit: 1000, // Default to 100
         singleTypes: [`about`],
+        queryLimit: 1000, // Default to 100
       },
     },
     {
