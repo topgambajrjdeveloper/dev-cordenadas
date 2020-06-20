@@ -50,8 +50,8 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || "http://localhost:3001",
         queryLimit: 1000, // Default to 100
-        contentTypes: ["jobs", "projects", "blogs"],
-        singleTypes: ["about"],
+        contentTypes: [`jobs`, `projects`, `blogs`],
+        singleTypes: [`about`],
       },
     },
     {
