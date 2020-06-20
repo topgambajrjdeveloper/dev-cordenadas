@@ -14,8 +14,21 @@ module.exports = {
     siteUrl: "https://dev-cordenadas.xyz/",
   },
   plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Dev Cordenadas App",
+        short_name: "DevCordenadas",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#2caeba",
+        display: "minimal-ui",
+        icon: "src/assets/favicon.png",
+        crossOrigin: `use-credentials`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
@@ -28,18 +41,17 @@ module.exports = {
     {
       resolve: "gatsby-plugin-netlify-cache",
       options: {
-        cachePublic: true
-      }
+        cachePublic: true,
+      },
     },
     {
-      resolve: `gatsby-source-strapi`,
+      //https://intense-refuge-03241.herokuapp.com
+      resolve: "gatsby-source-strapi",
       options: {
-        apiURL: "https://intense-refuge-03241.herokuapp.com",
-        // contentTypes: [`jobs`, `projects`, `blogs`, ],
-        //singleTypes:[`about` ]
-        contentTypes: [`jobs`, `projects`, `blogs`],
-        singleTypes: [`about`],
+        apiURL: process.env.API_URL || "http://localhost:3001",
         queryLimit: 1000, // Default to 100
+        contentTypes: ["jobs", "projects", "blogs"],
+        singleTypes: ["about"],
       },
     },
     {

@@ -5,15 +5,15 @@ import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 
 const query = graphql`
-  {
-    file(relativePath: { eq: "julifoto.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
+{
+  file(relativePath: {eq: "julifoto.png"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
       }
     }
   }
+}
 `
 
 const Hero = () => {

@@ -11,6 +11,9 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  if (result.errors) {
+    throw result.errors
+  }
   result.data.blogs.nodes.forEach(blog => {
     createPage({
       path: `/blogs/${blog.slug}`,
